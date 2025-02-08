@@ -32,22 +32,22 @@ uomi key inspect --scheme Ed25519 "YOUR_SEED_PHRASE"
 ### Service
 NOT: başka bir polkadat yada port değiştirmek isterseniz ekli değiştirebilirsiniz ancak daha ileriki kodlarda portlarla işimiz var ona göre uyarlamanız gerekir.
 ```
-sudo tee /etc/systemd/system/uomid.service > /dev/null <<'EOF'
+sudo tee /etc/systemd/system/uomid.service > /dev/null <<EOF
 [Unit]
 Description=Uomi Validator
 After=network.target
 StartLimitIntervalSec=0
 
 [Service]
-User=root
+User=$USER
 Type=simple
 Restart=always
 RestartSec=120
-ExecStart=/root/uomi-node/uomi \
+ExecStart=$(which uomi) \
     --validator \
     --name YOUR_NODE_NAME \
-    --chain /root/uomi-node/genesis.json \
-    --base-path /root/uomi-node \
+    --chain $HOME/uomi-node/genesis.json \
+    --base-path $HOME/uomi-node \
     --state-pruning 1000 \
     --blocks-pruning 1000 \
     --enable-evm-rpc \
@@ -60,10 +60,10 @@ ExecStart=/root/uomi-node/uomi \
     --reserved-nodes "/ip4/65.109.142.4/tcp/30333/p2p/12D3KooWSGp485hkoGXUucjWRDKf9AXaYQy9aLzMWpqhPFw816rZ" \
     --reserved-nodes "/ip4/138.199.152.43/tcp/30333/p2p/12D3KooWAz8V3VCrW2RwoyLRMSeoHhqcAHJtEFi4vtFhpWART5Ya"
 
-
 [Install]
 WantedBy=multi-user.target
 EOF
+
 ```
 
 ### Service enable and run
