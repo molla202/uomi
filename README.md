@@ -8,6 +8,8 @@ https://subexp.uomi.ai/?rpc=wss%3A%2F%2Fuomi-rpc.corenodehq.xyz#/staking
 
 wss://uomi-rpc.corenodehq.xyz
 
+https://uomi-rpc.corenodehq.xyz
+
 ### Download binary,genesis and system link
 ```
 cd
