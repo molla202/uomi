@@ -43,11 +43,11 @@ User=root
 Type=simple
 Restart=always
 RestartSec=120
-ExecStart=$HOME/uomi-node/uomi \
+ExecStart=/root/uomi-node/uomi \
     --validator \
-    --name "YOUR_NODE_NAME" \
-    --chain "$HOME/uomi-node/genesis.json" \
-    --base-path "$HOME/uomi-node" \
+    --name YOUR_NODE_NAME \
+    --chain /root/uomi-node/genesis.json \
+    --base-path /root/uomi-node \
     --state-pruning 1000 \
     --blocks-pruning 1000 \
     --enable-evm-rpc \
@@ -74,7 +74,7 @@ sudo systemctl restart uomid.service
 ```
 ### Service Log
 ```
-journalctl -u uomi -fo cat
+journalctl -u uomid -fo cat
 ```
 
 ###  insert your keys
