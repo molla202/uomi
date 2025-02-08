@@ -2,7 +2,11 @@
 
 ![image](https://github.com/user-attachments/assets/8dbb0d99-6c88-4180-afe1-701bde8b7aa3)
 
+### Public RPC and explorer
 
+https://subexp.uomi.ai/?rpc=wss%3A%2F%2Fuomi-rpc.corenodehq.xyz#/staking
+
+wss://uomi-rpc.corenodehq.xyz
 
 ### Download binary,genesis and system link
 ```
