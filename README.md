@@ -14,8 +14,8 @@ https://uomi-rpc.corenodehq.xyz
 ```
 cd
 mkdir -p $HOME/uomi-node
-wget -O $HOME/uomi-node/uomi https://github.com/Uomi-network/uomi-node/releases/download/v0.1.7/uomi_0.1.7_ubuntu_22
-wget -O $HOME/uomi-node/genesis.json https://github.com/Uomi-network/uomi-node/releases/download/v0.1.7/genesis.json
+wget -O $HOME/uomi-node/uomi https://github.com/Uomi-network/uomi-node/releases/download/v0.1.9/uomi_0.1.9_ubuntu_22
+wget -O $HOME/uomi-node/genesis.json https://github.com/Uomi-network/uomi-node/releases/download/v0.1.9/genesis.json
 chmod +x $HOME/uomi-node/uomi
 ```
 ```
